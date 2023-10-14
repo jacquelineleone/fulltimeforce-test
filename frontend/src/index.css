@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "HelveticaNeueCyr" !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 100;
+  src: local("HelveticaNeueCyr"),
+    url(./assets/fonts/HelveticaNeueCyr-Light.woff2);
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 200;
+  src: local("HelveticaNeueCyr"),
+    url(./assets/fonts/HelveticaNeueCyr-Roman.woff2);
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 300;
+  src: local("HelveticaNeueCyr"),
+    url(./assets/fonts/HelveticaNeueCyr-Medium.woff2);
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  font-weight: 400;
+  src: local("HelveticaNeueCyr"),
+    url(./assets/fonts/HelveticaNeueCyr-Bold.woff2);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #0d1117;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+p {
+  color: #7D8590;
+  font-weight: 200;
+  font-size: 18px;
 }
