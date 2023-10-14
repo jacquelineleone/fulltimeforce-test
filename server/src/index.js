@@ -14,6 +14,8 @@ app.use(
 
 app.use(express.json());
 
+app.use("/server", require("./routes/Commits"))
+
 async function main() {
   try {
     app.listen(process.env.PORT, () => {
