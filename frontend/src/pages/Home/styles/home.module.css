@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21.5px;
+    margin-bottom: 50px;
+}
+
+.header img {
+    width: 92px;
+}
+
+.textHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textHeader h1 {
+    margin-bottom: 0px;
+}
+
+.textHeader p {
+    margin-top: 10px;
+    width: 390px;
+    text-align: left;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.button {
+    background-color: #238636;
+    border: 2px solid #37914A;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 16;
+    font-weight: 300;
+    width: 165px;
+    height: 45px;
+}
