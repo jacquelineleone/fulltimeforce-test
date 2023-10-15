@@ -36,6 +36,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   background-color: #0d1117;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,5 +48,5 @@ h1, h2, h3, h4, h5, h6 {
 p {
   color: #7D8590;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
 }
