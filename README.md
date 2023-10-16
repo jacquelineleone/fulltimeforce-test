@@ -17,3 +17,4 @@
 6. Una vez ya corriendo el backend exitosamente, dirigirte al directorio `/frontend`
 7. Instalar las dependencias correspondientes utilizando el comando `npm install`
 8. Finalmente inicializar el frontend con el comando `npm start`. Este levantará la app en el puerto 3000.
+9. Para ver los commits de este repositorio tendrás que especificar: **jacquelineleone** en el primer campo y **fulltimeforce-test** en el segundo, sin embargo, con esta aplicación podrás acceder a los commits de cualquier repositorio público de github si contás con el nombre de usuario y el correspondiente nombre del repositorio.
