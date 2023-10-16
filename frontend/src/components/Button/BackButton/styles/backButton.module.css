@@ -1,7 +1,13 @@
 .backButton {
-    position: absolute;
-    left: 30px;
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
+  position: absolute;
+  left: 30px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 877px) {
+  .backButton {
+    left: 15px;
+  }
 }

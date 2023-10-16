@@ -54,7 +54,7 @@
   border: 2px solid #37914a;
   border-radius: 10px;
   color: #fff;
-  font-size: 16;
+  font-size: 16px;
   font-weight: 300;
   width: 165px;
   height: 45px;
@@ -63,5 +63,37 @@
 
 .error {
   display: flex;
-  color: #2F7FF5;
+  color: #2f7ff5;
+}
+
+@media only screen and (max-width: 877px) {
+  .header {
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 340px;
+  }
+  .header img {
+    width: 82px;
+  }
+  .textHeader {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .textHeader p {
+    margin-top: 5px;
+    width: 255px;
+  }
+  .form {
+    gap: 10px;
+  }
+  .buttonCont {
+    margin-top: 10px;
+    width: 340px;
+  }
+  .button {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+  }
 }

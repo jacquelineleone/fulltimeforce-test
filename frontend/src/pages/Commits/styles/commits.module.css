@@ -41,3 +41,26 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media only screen and (max-width: 877px) {
+  .header {
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 300px;
+    margin-top: 50px;
+  }
+  .header img {
+    width: 82px;
+  }
+  .textHeader {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .textHeader p {
+    margin-top: 5px;
+    width: 215px;
+  }
+  .commitCont {
+    gap: 12px;
+  }
+}
