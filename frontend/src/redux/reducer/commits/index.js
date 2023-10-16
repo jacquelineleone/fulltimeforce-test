@@ -9,10 +9,11 @@ const commitsReducer = (state = initialState, action) => {
     case GET_COMMITS:
       return {
         ...state,
+        commits: action.payload,
       };
     default:
       return state;
   }
 };
 
-export default commitsReducer
+export default commitsReducer;
