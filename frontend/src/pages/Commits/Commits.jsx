@@ -6,8 +6,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { getCommits } from "../../redux/actions/commits";
 //Assets
 import github from "../../assets/images/Home/github.svg";
+import arrow from "../../assets/images/Commits/back-arrow.svg";
 //Components
 import CommitCard from "../../components/Card/CommitCard/CommitCard";
+import Loader from "../../components/Loader/Loader";
+import BackButton from "../../components/Button/BackButton/BackButton";
 
 export default function Commits() {
   const dispatch = useDispatch();
@@ -19,27 +22,41 @@ export default function Commits() {
   useEffect(() => {
     dispatch(getCommits({ user: params.user, repo: params.repository })).then(
       function (res) {
-        if (res.status === 200) {
-          setIsLoading(false);
-        } else {
+        if (res && res.name === "AxiosError") {
           setIsLoading(false);
           setErrors(true);
+        } else {
+          setIsLoading(false);
         }
       }
     );
   }, []);
 
-  /*if(isLoading) {
-    return ()
-  }*/
-
-  /*if(errors) {
-    return ()
+  if (isLoading) {
+    return <Loader />;
   }
-   */
+
+  if (errors) {
+    return (
+      <div className={style.container}>
+        <BackButton />
+        <div className={style.header}>
+          <img src={github} alt="github-logo" />
+          <div className={style.textHeader}>
+            <h1>Ups! Hubo un error</h1>
+            <p>
+              El repositorio <b>{params.repository}</b> perteneciente al usuario{" "}
+              <b>{params.user}</b> no ha sido encontrado
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={style.container}>
+      <BackButton />
       <div className={style.header}>
         <img src={github} alt="github-logo" />
         <div className={style.textHeader}>
@@ -50,14 +67,15 @@ export default function Commits() {
         </div>
       </div>
       <div className={style.commitCont}>
-        {commits.map((commit) => (
-          <CommitCard
-            key={commit.sha}
-            name={commit.commit.message}
-            url={commit.html_url}
-            user={commit.commit.author.name}
-          />
-        ))}
+        {commits[0] !== undefined &&
+          commits.map((commit) => (
+            <CommitCard
+              key={commit.sha}
+              name={commit.commit.message}
+              url={commit.html_url}
+              user={commit.commit.author.name}
+            />
+          ))}
       </div>
     </div>
   );

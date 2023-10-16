@@ -1,9 +1,10 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .header {
@@ -19,24 +20,24 @@
 }
 
 .textHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .textHeader h1 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .textHeader p {
-    margin-top: 10px;
-    width: 310px;
-    text-align: left;
+  margin-top: 10px;
+  width: 310px;
+  text-align: left;
 }
 
 .commitCont {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

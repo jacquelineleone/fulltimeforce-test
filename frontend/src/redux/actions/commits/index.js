@@ -15,7 +15,11 @@ export function getCommits(data) {
       });
       return json;
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: GET_COMMITS,
+        payload: [],
+      });
+      return error;
     }
   };
 }

@@ -29,15 +29,19 @@ export default function Home() {
     return errors;
   };
 
-  const { form, errors, handleChange } = useForm(initialForm, validateForm);
+  const { form, send, errors, handleChange, handleSubmit } = useForm(
+    initialForm,
+    validateForm
+  );
 
   const allowContinue = Object.keys(errors).length === 0;
 
   const handleSearch = (e) => {
     e.preventDefault();
+    handleSubmit(e);
     if (allowContinue) {
       navigate(`/commits/${form.user}/${form.repo}`);
-    } /* else { return //manage err } */
+    }
   };
 
   return (
@@ -62,6 +66,7 @@ export default function Home() {
             inputPlaceholder={"Escribi tu nombre de usuario"}
             onChangeFunction={handleChange}
           />
+          {send && errors.user && <p className={style.error}>{errors.user}</p>}
         </section>
         <section>
           <FormInput
@@ -70,8 +75,9 @@ export default function Home() {
             inputPlaceholder={"Escribi el nombre de tu repositorio"}
             onChangeFunction={handleChange}
           />
+          {send && errors.repo && <p className={style.error}>{errors.repo}</p>}
         </section>
-        <div>
+        <div className={style.buttonCont}>
           <button className={style.button} onClick={(e) => handleSearch(e)}>
             Buscar
           </button>

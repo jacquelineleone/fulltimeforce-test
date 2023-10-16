@@ -43,6 +43,12 @@
   align-items: center;
 }
 
+.buttonCont {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .button {
   background-color: #238636;
   border: 2px solid #37914a;
@@ -53,4 +59,9 @@
   width: 165px;
   height: 45px;
   cursor: pointer;
+}
+
+.error {
+  display: flex;
+  color: #2F7FF5;
 }
