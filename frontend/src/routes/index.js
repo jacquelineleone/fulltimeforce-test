@@ -9,7 +9,7 @@ export default function Rutas() {
     <BrowserRouter>
       <Routes>
         <Route path="/" Component={Home} />
-        <Route path="/commits/:repository" Component={Commits} />
+        <Route path="/commits/:user/:repository" Component={Commits} />
       </Routes>
     </BrowserRouter>
   );
