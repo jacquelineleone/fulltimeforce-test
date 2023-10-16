@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21.5px;
+  margin-bottom: 50px;
+}
+
+.header img {
+  width: 92px;
+}
+
+.textHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.textHeader h1 {
+    margin-bottom: 0px;
+}
+
+.textHeader p {
+    margin-top: 10px;
+    width: 310px;
+    text-align: left;
+}
+
+.commitCont {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
